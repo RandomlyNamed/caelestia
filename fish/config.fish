@@ -39,4 +39,12 @@ if status is-interactive
     function mark_prompt_start --on-event fish_prompt
         echo -en "\e]133;A\e\\"
     end
+    # Custom ASCII art 
+    function clear --wraps clear
+    # 1. Run the system's actual clear command
+    command clear
+
+    # 2. Run your existing greeting function
+    fish_greeting
+end
 end
